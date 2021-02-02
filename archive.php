@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package hello_world
  */
 
 get_header();
@@ -47,5 +47,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+gethello_worldidebar();
 get_footer();

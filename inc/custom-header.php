@@ -8,46 +8,46 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package _s
+ * @package hello_world
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses _s_header_style()
+ * @uses hello_world_headerhello_worldtyle()
  */
-function _s_custom_header_setup() {
-	add_theme_support(
+function hello_world_custom_headerhello_worldetup() {
+	add_themehello_worldupport(
 		'custom-header',
 		apply_filters(
-			'_s_custom_header_args',
+			'hello_world_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => '_s_header_style',
+				'wp-head-callback'   => 'hello_world_headerhello_worldtyle',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', '_s_custom_header_setup' );
+add_action( 'afterhello_worldetup_theme', 'hello_world_custom_headerhello_worldetup' );
 
-if ( ! function_exists( '_s_header_style' ) ) :
+if ( ! function_exists( 'hello_world_headerhello_worldtyle' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see _s_custom_header_setup().
+	 * @see hello_world_custom_headerhello_worldetup().
 	 */
-	function _s_header_style() {
+	function hello_world_headerhello_worldtyle() {
 		$header_text_color = get_header_textcolor();
 
 		/*
 		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
+		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_themehello_worldupport( 'custom-header' ).
 		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+		if ( get_themehello_worldupport( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 			return;
 		}
 
